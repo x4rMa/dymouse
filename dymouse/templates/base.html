@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <head>
+
+        <title>{% block the_title %}{% endblock %}</title>
+
+        <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <style>
+             .alert{
+                opacity: 0;
+                -webkit-transition: opacity 0.5s linear;
+                -moz-transition: opacity 0.5s linear;
+                -o-transition: opacity 0.5s linear;
+                transition: opacity 0.5s linear;
+            }
+            .alert.in {
+                opacity: 1;
+            }
+            .alert.out {
+                opacity: 0;
+            }
+        </style>
+
+        <link rel="stylesheet" href="/static/css/{% block bootstrap %}vanilla{% endblock %}_bootstrap.css">
+        <link rel="stylesheet" href="/static/css/custom_bootstrap.css">
+
+    <head>
+    <body>
+
+
+<div class="jumbotron">
+    <h1>{% block jumbo_title %}{% endblock %}</h1>
+    <p class="lead">{% block subtitle %}{% endblock %}</p>
+</div>
+
+<p id="above_status">&nbsp;</p>
+<span class="alert alert-success fade" role="alert" id="status">
+Status...
+</span>
+<p id="below_status">&nbsp;</p>
+
+
+<div class="container">
+    {% block page_content %}
+    {% endblock %}
+</div>
+
+
+    </body>
+</html>
+
