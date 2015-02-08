@@ -5,8 +5,7 @@ via Raspberry Pi, Python, Flask, and a REST API.
 
 ## How Does It Look?
 
-(image)
-![The Setup](dymouse/webapp/static/dymouse.jpg "The Setup")
+![The Setup](dymouse/webapp/static/img/dymouse.jpg "The Setup")
 
 ## How It Works
 
