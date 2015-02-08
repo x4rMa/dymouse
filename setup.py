@@ -12,7 +12,7 @@ config = {
     'author_email': 'charles@charlesreid1.com',
     'version': '1.0',
     'install_requires': ['pyusb','flask','numpy'],
-    'packages': ['dymouse'],
+    'packages': ['dymouse','dymouse.driver','dymouse.webapp'],
     'include_package_data' : True,
     'scripts': [],
     'name': 'dymouse',
