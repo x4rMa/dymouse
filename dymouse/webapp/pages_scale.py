@@ -15,8 +15,4 @@ that lead to pages.
 def index():
     return render_template('index.html')
 
-@app.route('/view')
-@app.route('/view/')
-def furnace_view():
-    return render_template('ScaleView.html')
 

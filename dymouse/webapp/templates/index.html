@@ -5,17 +5,41 @@
 {% block subtitle %}Raspberry Pi + Dymo USB Scale = Open Science Project{% endblock %}
 {% block page_content %}
 
-<div class="row">
+<script type=text/javascript src="/static/js/DymoUSBScaleView.js">
+</script>
 
-    <div class="col-md-4">
 
-        <p>Howdy!</p>
-        <p>&nbsp;</p>
-        <p><a href="/view">View Scale Reading</a></p>
-        
-    </div><!--div col-->
+<div>
+    <form>
 
-</div><!--div row-->
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="well">
+
+                    <p><a id="read_once" class="btn btn-lg btn-primary" href="javascript:void(0);">Read Value</a> 
+                    <p>&nbsp;</p>
+                    <p><a id="start_read" class="btn btn-lg btn-success" href="javascript:void(0);">Start Reading</a> 
+                    <p>&nbsp;</p>
+                    <p><a id="stop_read" class="btn btn-lg btn-danger" href="javascript:void(0);">Stop Reading</a> 
+                    <p>&nbsp;</p>
+                
+                </div>
+            </div><!--div col-->
+
+            <div class="col-md-4">
+
+                <div class="well">
+                    <div class="input-group input-group-lg"> 
+                        <input id="current_reading" type="text" class="form-control" readonly> 
+                    </div>
+                </div>
+            </div><!--div col-->
+
+        </div><!--div row-->
+
+    </form>
+</div>
 
 {% endblock %}
 

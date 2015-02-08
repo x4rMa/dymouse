@@ -12,7 +12,7 @@ class USBScaleSingleton(object):
     (Useful to avoid repeatedly creating/destroying
     instances of the scale)
     """
-    def __new(self,**kwargs):
+    def __new__(self,**kwargs):
         try:
             return self.scale
         except AttributeError:

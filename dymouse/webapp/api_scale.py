@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, Response, redirect, url_for, jsonify, session
-from blueprint_scale import app
 import numpy as np
 import time
+from blueprint_scale import app
 from dymouse.driver import *
 
 """
@@ -39,7 +39,7 @@ def read_mass():
     Default units are grams.
     """
     mode = 'grams'
-    s = DymoUSBScale()
+    s = USBScaleSingleton()
     timestamp,wt_g = s.get_weight(mode)
-    return jsonify(time=timestamp, weight=wt_g, units=units)
+    return jsonify(time=timestamp, weight=wt_g, units=mode)
 
