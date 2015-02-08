@@ -7,6 +7,15 @@ via Raspberry Pi, Python, Flask, and a REST API.
 
 ![The Setup](dymouse/webapp/static/img/dymouse.jpg "The Setup")
 
+The Dymo USB scale (right) is connected to the Raspberry Pi (center) by 
+a USB cable. The Raspberry Pi is connected to the network router
+by a network cable. The Mac laptop (left) is on the same wireless network
+as the Raspberry Pi and is SSHed into the Pi on the terminal window shown.
+
+This is an early prototype version. Dymouse now has a web-based AJAX interface
+and a REST API interface.
+
+
 ## How It Works
 
 The way dymouse works is, you hook up your Dymo USB postage scale
@@ -21,7 +30,8 @@ readings of the Dymo USB postage scale can be made available
 through a REST API, making the Dymo scale an internet-capable
 instrument, and an internet of things thing.
 
-## Layout
+
+## Code Layout
 
 dymosue is a Python module that is comprised of two sub-modules.
 
